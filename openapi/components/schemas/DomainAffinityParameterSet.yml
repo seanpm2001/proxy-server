@@ -1,0 +1,16 @@
+type: object
+properties:
+  recencyFactor:
+    type: number
+  frequencyFactor:
+    type: number
+  combinedDomainFactor:
+    type: number
+  perfectFrequencyVisits:
+    type: number
+  perfectCombinedDomainScore:
+    type: number
+  multiDomainBoost:
+    type: number
+  itemScoreFactor:
+    type: number

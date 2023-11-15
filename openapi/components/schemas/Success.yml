@@ -1,0 +1,11 @@
+type: object
+properties:
+  status:
+    type: integer
+    description: Indicates the response is successful.
+    enum:
+      - 1
+  error:
+    type: integer
+    enum:
+      - 0

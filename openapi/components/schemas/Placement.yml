@@ -1,0 +1,25 @@
+type: object
+description: https://dev.adzerk.com/reference/request
+required:
+  - name
+properties:
+  name:
+    type: string
+    example: spocs
+    description: Corresponds to the key in the response object.
+  ad_types:
+    type: array
+    description: https://dev.adzerk.com/docs/ad-sizes
+    items:
+      type: integer
+  zone_ids:
+    type: array
+    description: https://dev.adzerk.com/docs/zones-overview
+    items:
+      type: integer
+  count:
+    type: integer
+    example: 20
+    minimum: 1
+    maximum: 20
+    description: number of spocs to return for this placement

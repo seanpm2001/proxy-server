@@ -1,0 +1,19 @@
+delete:
+  summary: Delete a user's personal data from AdZerk
+  description: >-
+    Used when a user opts-out of sponsored content to delete the user's data
+    from AdZerk.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            pocket_id:
+              description: ID that uniquely identifies a session.
+              example: '{12345678-8901-2345-aaaa-bbbbbbcccccc}'
+              type: string
+  responses:
+    '200':
+      description: Successfully deleted user data from AdZerk.

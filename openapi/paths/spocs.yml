@@ -1,0 +1,29 @@
+post:
+  summary: Get sponsored content
+  description: >-
+    Get a list of spocs based on region and pocket_id from AdZerk. The IP
+    address is used to deduce a rough geographic region, for example "Texas" in
+    the U.S. or "England" in the U.K. The IP is not stored or shared with AdZerk
+    to preserve privacy.
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          $ref: ../components/schemas/SpocRequest.yml
+  responses:
+    '200':
+      description: Responds with settings and a list of spocs.
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: ../components/schemas/Success.yml
+              - type: object
+                required:
+                  - spocs
+                properties:
+                  settings:
+                    $ref: ../components/schemas/Settings.yml
+                  spocs:
+                    $ref: ../components/schemas/SpocFeed.yml

@@ -1,0 +1,22 @@
+type: object
+required:
+  - url
+properties:
+  spocsPerNewTabs:
+    type: integer
+    minimum: 1
+    example: 1
+  domainAffinityParameterSets:
+    type: object
+    additionalProperties:
+      $ref: ./DomainAffinityParameterSet.yml
+  timeSegments:
+    type: array
+    items:
+      $ref: ./TimeSegment.yml
+  recsExpireTime:
+    type: integer
+    example: 5400
+  version:
+    type: string
+    example: bc184fc1a56dde7e7879135781932fdb1dd5d235

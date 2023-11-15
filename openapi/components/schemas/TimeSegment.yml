@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: string
+  startTime:
+    type: integer
+  endTime:
+    type: integer
+  weightPosition:
+    example: 1

@@ -1,0 +1,36 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 30295
+  title:
+    type: string
+    example: Why driving is hard—even for AIs
+  domain:
+    type: string
+    example: arstechnica.com
+  image:
+    type: string
+    example: >-
+      https://img-getpocket.cdn.mozilla.net/direct?url=https%3A%2F%2Fcdn.arstechnica.net%2Fwp-content%2Fuploads%2F2018%2F12%2FGettyImages-898172236-640x427.jpg&resize=w450
+  raw_image_src:
+    type: string
+    example: >-
+      https://cdn.arstechnica.net/wp-content/uploads/2018/12/GettyImages-898172236-640x427.jpg
+  published_timestamp:
+    type: integer
+    description: Unix timestamp of when this item was published
+    example: 1543471200
+  item_score:
+    type: number
+    example: 0.98
+  parameter_set:
+    type: string
+    example: default
+  domain_affinities:
+    type: object
+    additionalProperties:
+      type: number
+    example:
+      vanguard.com: 0.9956
+      wealthsimple.com: 0.9193

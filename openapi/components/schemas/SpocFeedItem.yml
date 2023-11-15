@@ -1,0 +1,82 @@
+type: object
+allOf:
+  - $ref: ./FeedItem.yml
+  - type: object
+    properties:
+      excerpt:
+        type: string
+        example: >-
+          Despite promises of 'soon,' the infrastructure to support the
+          driverless future isn't there yet.
+      shim:
+        type: object
+        properties:
+          click:
+            type: string
+            example: 1234123asdf4tYadsfQ,xY-01BU12
+          impression:
+            type: string
+            example: a0c3943asdf4tYadsf300,xY-01BU9aadc
+          delete:
+            type: string
+            example: fdea123asdf4tYadsf1000,xY-01BUa654
+          save:
+            type: string
+            example: 4567123asdf4tYadsfQcda,xY-01BU123
+      expiration_timestamp:
+        type: integer
+        example: 1544939940
+      flight_id:
+        type: integer
+        example: 432
+      campaign_id:
+        type: integer
+        example: 784
+      priority:
+        type: integer
+        description: The priority order. 1-100, 1 is highest priority.
+        minimum: 1
+        maximum: 100
+      sponsor:
+        type: string
+        example: NextAdvisor
+      context:
+        type: string
+        description: Deprecated. Use sponsor field instead.
+        example: Sponsored by NextAdvisor
+      cta:
+        type: string
+        description: Text to display on CTA button
+        example: Learn more
+      min_score:
+        type: number
+        example: 0.1
+      parameter_set:
+        type: string
+        example: default
+      caps:
+        type: object
+        properties:
+          lifetime:
+            type: integer
+            example: 50
+          flight:
+            type: object
+            properties:
+              count:
+                type: integer
+                example: 10
+              period:
+                type: integer
+                description: Period in seconds
+                example: 86400
+          campaign:
+            type: object
+            properties:
+              count:
+                type: integer
+                example: 10
+              period:
+                type: integer
+                description: Period in seconds
+                example: 86400

@@ -1,0 +1,23 @@
+oneOf:
+  - type: array
+    items:
+      $ref: ./SpocFeedItem.yml
+  - type: object
+    required:
+      - title
+      - flight_id
+      - sponsor
+    properties:
+      title:
+        type: string
+        example: Best of the Web
+      flight_id:
+        type: integer
+        example: 4321
+      sponsor:
+        type: string
+        example: NextAdvisor
+      items:
+        type: array
+        items:
+          $ref: ./SpocFeedItem.yml

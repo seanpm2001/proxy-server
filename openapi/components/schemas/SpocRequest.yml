@@ -1,0 +1,27 @@
+type: object
+required:
+  - version
+  - consumer_key
+  - pocket_id
+  - placements
+properties:
+  version:
+    type: integer
+    description: API version. Currently `1` is the only version.
+    format: int32
+    minimum: 1
+    maximum: 1
+    default: 1
+    example: 1
+  consumer_key:
+    type: string
+    description: Identifies that the request is coming from Firefox.
+    example: 40249-e88c401e1b1f2242d9e441c4
+  pocket_id:
+    type: string
+    description: ID that uniquely identifies a session.
+    example: '{12345678-8901-2345-aaaa-bbbbbbcccccc}'
+  placements:
+    type: array
+    items:
+      $ref: ./Placement.yml
